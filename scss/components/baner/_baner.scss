@@ -1,5 +1,98 @@
 @import "layout/var";
 
 .baner {
-   
+    background: linear-gradient(138.37deg, #18275A 1.85%, #08113C 52.72%);
+    position: relative;
+    overflow: hidden;
+
+    &__flex-wrapper {
+        display: flex;
+        align-items: center;
+
+    }
+
+    &__left-side {
+        position: relative;
+        max-width: 466px;
+    }
+
+    &__right-side {
+        position: relative;
+        width: 100%;
+        max-width: 350px;
+        margin:  0 auto;
+    }
+
+    &__photo-wr {
+        position: relative;
+
+    }
+
+    &__name-wr {
+        position: absolute;
+        bottom: 52px;
+        left: 0;
+        transform: translateX(-50%) skewX(15deg);
+        padding: 24px 61px;
+        background: linear-gradient(114.33deg, #3E3E45 15.15%, #292830 112.03%);
+        box-shadow: 10px 4px 15px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        
+    }
+
+    &__name {
+        transform: skewX(-15deg);
+        color: #fff;
+        font-size: 24px;
+        line-height: 29px;
+        text-align: center;
+        font-family: $mus700;
+    }
+
+    &__title {
+        font-size: 48px;
+        line-height: 58px;
+        font-family: $mus700;
+        color: #FFFFFF;
+        margin-bottom: 15px;
+    }
+
+    &__text {
+        font-size: 18px;
+        line-height: 22px;
+        margin-bottom: 24px;
+        color: #FFFFFF;
+    }
+
+    &__dot {
+        position: absolute;
+        top: 0;
+        left: -160px;
+        width: 1235px;
+        height: 418px;
+        background-image: url(../img/dots1.png);
+    }
+}
+
+.button-wr {
+    display: flex;
+
+    &__button {
+        display: block;
+        background: linear-gradient(0deg, #2856EA -12.5%, #517DFB 100%);
+        box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        border: none;
+        transition: 0.3s;
+        width: 256px;
+        text-align: center;
+        color: #fff;
+        padding: 19px 10px;
+        font-size: 18px;
+        line-height: 22px;
+
+        &:hover {
+            box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 0.25);
+        }
+    }
 }

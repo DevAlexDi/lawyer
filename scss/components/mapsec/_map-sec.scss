@@ -1,0 +1,43 @@
+@import "layout/var";
+
+.map-sec {
+    padding: 50px 0 70px;
+    position: relative;
+
+    &__title-wr {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 60px;
+    }
+
+    &__title {
+        font-size: 48px;
+        line-height: 58px;
+        font-family: $mus700;
+        color: #3E3E45;
+    }
+
+    &__sub-title {
+        max-width: 527px;
+        font-size: 16px;
+        line-height: 22px;
+        text-align: justify;
+        
+        color: #3E3E45;
+        
+    }
+}
+
+.map-wr {
+    position: relative;
+    padding-left: 170px;
+
+    &__map {
+        height: 528px;
+
+        iframe {
+            
+        }
+    }
+}

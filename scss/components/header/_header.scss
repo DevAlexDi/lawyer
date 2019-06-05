@@ -1,5 +1,76 @@
 @import "layout/var";
 
 .header {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 32px 0;
+
+   &__side {
+
+        &--left {
+            width: 100%;
+            max-width: 215px;
+        }
+
+        &--right {
+            width: 100%;
+            max-width: 215px;
+        }
+
+        &--mid {
+            margin: 0 70px;
+        }
+
+   }
+
+   &__tel {
+    font-size: 24px;
+    line-height: 29px;
+    font-family: $mus700;
+    color: #fff;
+   }
+}
+
+.menu-list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    &__item {
+        padding: 0 7.5px;
+    }
+
+    &__link {
+        font-size: 18px;
+        line-height: 22px;
+        color: #fff;
+        display: block;
+        position: relative;
+        cursor: pointer;
+        &--with-arr {
+            padding-right: 15px;
    
+            &:before {
+               content: "";
+               display: block;
+               position: absolute;
+               top: 50%;
+               right: 0;
+               transform: translateY(-50%);
+               width: 0;
+               height: 0;
+               vertical-align: middle;
+               border-top: 4px dashed;
+               border-right: 4px solid transparent;
+               border-left: 4px solid transparent;
+            }
+        }
+    }
+
+    &__second-lvl {
+        display: none;
+    }
 }

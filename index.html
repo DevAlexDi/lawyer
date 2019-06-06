@@ -11,8 +11,8 @@
   
 </head>
 <body>
-    
-    <section class="baner">
+
+    <header>
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -38,12 +38,36 @@
                                         <ul class="menu-list__second-lvl">
                                             <li class="menu-list__second-lvl-item">
                                                 <a class="menu-list__second-lvl-link" href="#">услуга 1</a>
+                                                <ul class="menu-list__third-lvl">
+                                                    <li class="menu-list__third-lvl-item">
+                                                        <a class="menu-list__third-lvl-link" href="#">подменю 1</a>
+                                                    </li>
+                                                    <li class="menu-list__third-lvl-item">
+                                                        <a class="menu-list__third-lvl-link" href="#">подменю 1</a>
+                                                    </li>
+                                                </ul>
                                             </li>
                                             <li class="menu-list__second-lvl-item">
                                                 <a class="menu-list__second-lvl-link" href="#">услуга 2</a>
+                                                <ul class="menu-list__third-lvl">
+                                                    <li class="menu-list__third-lvl-item">
+                                                        <a class="menu-list__third-lvl-link" href="#">подменю 2</a>
+                                                    </li>
+                                                    <li class="menu-list__third-lvl-item">
+                                                        <a class="menu-list__third-lvl-link" href="#">подменю 2</a>
+                                                    </li>
+                                                </ul>
                                             </li>
                                             <li class="menu-list__second-lvl-item">
                                                 <a class="menu-list__second-lvl-link" href="#">услуга 3</a>
+                                                <ul class="menu-list__third-lvl">
+                                                    <li class="menu-list__third-lvl-item">
+                                                        <a class="menu-list__third-lvl-link" href="#">подменю 3</a>
+                                                    </li>
+                                                    <li class="menu-list__third-lvl-item">
+                                                        <a class="menu-list__third-lvl-link" href="#">подменю 3</a>
+                                                    </li>
+                                                </ul>
                                             </li>
                                         </ul>
                                     </li>
@@ -63,10 +87,18 @@
                 </div>
             </div>
         </div>
+    </header>
+    
+    <section class="baner">
+        
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div class="baner__flex-wrapper">
+                        <div class="baner__scroll">
+                            <p>Листать вниз</p>
+                            <img src="img/mouse.svg" class="img-responsive" alt="">
+                        </div>
                         <div class="baner__dot"></div>
                         <div class="baner__left-side">
                             <div class="baner__photo-wr">
@@ -80,7 +112,7 @@
                             <h1 class="baner__title">Адвокат<br> по уголовным делам</h1>
                             <p class="baner__text">Решаем сложные юридические вопросы.<br>Отвечаем своим именем*</p>
                             <div class="button-wr">
-                                <button class="button-wr__button">Заказать звонок</button>
+                                <button class="button-wr__button modal-request-show">Заказать звонок</button>
                             </div>
                         </div>
                     </div>
@@ -185,7 +217,7 @@
                             <form class="form-order">
                                 <p class="form-order__title"><span>Закажите бесплатную</span> консультацию и мы расскажем,<br> что сможем сделать для вас</p>
                                 <input class="form-order__input form-order__input--name" type="text" placeholder="Ваше имя">
-                                <input class="form-order__input form-order__input--tel" type="text" placeholder="Ваш телефон">
+                                <input class="form-order__input form-order__input--tel tel-inp" type="text" placeholder="Ваш телефон">
                                 <input class="form-order__input form-order__input--mail" type="email" placeholder="Ваша почта">
                                 <p class="form-order__msg"><!--сюда текст при успешной отправке--></p>
                                 <div class="button-wr form-order__button-wr">
@@ -262,26 +294,94 @@
             </div>
         </div>
     </div>
-    <section class="content">
-        <div class="content__wr">
-            <div class="white-bg">
-                <div class="my-container">
-                    <div class="map-sec">
-                        <div class="map-sec__title-wr">
-                            <h3 class="map-sec__title">Офис <br>компании</h3>
-                            <p class="map-sec__sub-title">Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более</p>
+    <div class="content__wr">
+        <div class="white-bg">
+            <div class="my-container">
+                <div class="map-sec">
+                    <p class="map-sec__abs-text">Офис компании</p>
+                    <div class="map-sec__dot-1"></div>
+                    <div class="map-sec__dot-2"></div>
+                    <div class="map-sec__title-wr">
+                        <h3 class="map-sec__title">Офис <br>компании</h3>
+                        <p class="map-sec__sub-title">Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более</p>
+                    </div>
+                    <div class="map-wr">
+                        <div class="map-wr__map" id="map"></div>
+                        <div class="map-wr__info">
+                            <p class="map-wr__adress">115088, Москва, 1-я ул. Машиностроения, 5</p>
+                            <a href="tel:+79167062074" class="map-wr__tel">+7 916 706 20 74</a>
+                            <a href="mailto:mail@advokat-petrov.com" class="map-wr__mail">mail@advokat-petrov.com</a>
+                            <div class="button-wr map-wr__button-wr">
+                                <button class="button-wr__button modal-request-show">Заказать звонок</button>
+                            </div>
                         </div>
-                        <div class="map-wr">
-                            <div class="map-wr__map" id="map"></div>
+                    </div>
+                    <!-- <div class="footer">
+                        <p class="footer__copyright">Petrov Roman 2017 | All Rights Reserved</p>
+                        <a href="#" class="footer__conditions" target="_blank">Политика конфеденциальности</a>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="footer-row">
+                        <ul class="menu-list menu-list--footer-theme footer-row__menu">
+                            <li class="menu-list__item">
+                                <a class="menu-list__link" href="#">Главная</a>
+                            </li>
+                            <li class="menu-list__item">
+                                <a class="menu-list__link" href="#">О себе</a>
+                            </li>
+                            <li class="menu-list__item">
+                                <a class="menu-list__link " href="#">Услуги</a>
+                            </li>
+                            <li class="menu-list__item">
+                                <a class="menu-list__link" href="#">Контакты</a>
+                            </li>
+                            <li class="menu-list__item">
+                                <a class="menu-list__link" href="#">Актуальные статьи</a>
+                            </li>
+                        </ul>
+
+                        <div class="footer-row__side">
+                            <a href="tel:+79167062074" class="footer-row__tel">+7 916 706 20 74</a>
+                            <a href="mailto:mail@advokat-petrov.com" class="footer-row__mail">mail@advokat-petrov.com</a>
                         </div>
+                    </div>
+                    <div class="footer-row-2">
+                        <p class="footer-row-2__copyright">Petrov Roman 2017 | All Rights Reserved</p>
+                        <a href="#" class="footer-row-2__conditions" target="_blank">Политика конфеденциальности</a>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-
-    </section>
+    </footer>
     
+    <div class="modal fade" id="modal-request" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-request">
+                <form class="form-order">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <p class="form-order__title"><span>Закажите бесплатную</span> консультацию и мы расскажем,<br> что сможем сделать для вас</p>
+                    <input class="form-order__input form-order__input--name" type="text" placeholder="Ваше имя">
+                    <input class="form-order__input form-order__input--tel tel-inp" type="text" placeholder="Ваш телефон">
+                    <input class="form-order__input form-order__input--mail" type="email" placeholder="Ваша почта">
+                    <p class="form-order__msg"><!--сюда текст при успешной отправке--></p>
+                    <div class="button-wr form-order__button-wr">
+                        <button class="button-wr__button">Заказать звонок</button>
+                    </div>
+                    <p class="form-order__terms">Нажимая кнопу, Вы соглашаетесь с условиями <a href="#" target="_blank">передачи данных</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
 
 
 
@@ -290,45 +390,45 @@
         function initMap() {
             var map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: 55.7152518, lng: 37.67406862},
-          zoom: 12,
+          zoom: 14,
           styles: [
-    {
-        "stylers": [
             {
-                "saturation": -100
+                "stylers": [
+                    {
+                        "saturation": -100
+                    },
+                    {
+                        "gamma": 0.8
+                    },
+                    {
+                        "lightness": 4
+                    },
+                    {
+                        "visibility": "on"
+                    }
+                ]
             },
             {
-                "gamma": 0.8
-            },
-            {
-                "lightness": 4
-            },
-            {
-                "visibility": "on"
+                "featureType": "landscape.natural",
+                "stylers": [
+                    {
+                        "visibility": "on"
+                    },
+                    {
+                        "color": "#5dff00"
+                    },
+                    {
+                        "gamma": 4.97
+                    },
+                    {
+                        "lightness": -5
+                    },
+                    {
+                        "saturation": 100
+                    }
+                ]
             }
         ]
-    },
-    {
-        "featureType": "landscape.natural",
-        "stylers": [
-            {
-                "visibility": "on"
-            },
-            {
-                "color": "#5dff00"
-            },
-            {
-                "gamma": 4.97
-            },
-            {
-                "lightness": -5
-            },
-            {
-                "saturation": 100
-            }
-        ]
-    }
-]
         });
         var marker = new google.maps.Marker({
           position: {lat: 55.7152518, lng: 37.67406862},
@@ -337,16 +437,13 @@
         });
         }
     </script>
-    <!--Load the API from the specified URL
-    * The async attribute allows the browser to render the page while the API loads
-    * The key parameter will contain your own API key (which is not needed for this tutorial)
-    * The callback parameter executes the initMap() function
-    -->
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEEROOCklkbdM8M4DbtSNbssim8T0OPa8&callback=initMap">
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/inputmask.js"></script>
+    <script type="text/javascript" src="js/jquery.inputmask.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
 </body>
 </html>

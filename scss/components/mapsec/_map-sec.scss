@@ -4,11 +4,25 @@
     padding: 50px 0 70px;
     position: relative;
 
+    @media (max-width: 767px) {
+        padding: 40px 0;
+    }
+
     &__title-wr {
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin-bottom: 60px;
+        position: relative;
+        z-index: 1;
+
+        @media (max-width: 991px) {
+            display: block;
+        }
+
+        @media (max-width: 767px) {
+            margin-bottom: 30px;
+        }
     }
 
     &__title {
@@ -16,6 +30,15 @@
         line-height: 58px;
         font-family: $mus700;
         color: #3E3E45;
+
+        @media (max-width: 991px) {
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 767px) {
+            font-size: 24px;
+            line-height: inherit;
+        }
     }
 
     &__sub-title {
@@ -27,17 +50,154 @@
         color: #3E3E45;
         
     }
+
+    &__dot-1 {
+        position: absolute;
+        top: 8px;
+        left: 400px;
+        width: 1235px;
+        height: 418px;
+        background-image: url(../img/dots1.png);
+    }
+
+    &__dot-2 {
+        position: absolute;
+        bottom: 121px;
+        left: -200px;
+        width: 1235px;
+        height: 418px;
+        background-image: url(../img/dots1.png);
+    }
+
+    &__abs-text {
+        position: absolute;
+        left: -227px;
+        top: calc(50% + 16px);
+        transform: translate(-50%,-50%) rotate(-90deg);
+        transform-origin: center;
+        font-size: 24px;
+        line-height: 29px;
+        color: #E5E5E5;
+    }
 }
 
 .map-wr {
     position: relative;
     padding-left: 170px;
 
+    @media (max-width: 767px) {
+        padding-left: 0;
+        display: flex;
+        flex-direction: column-reverse;
+        margin-bottom: 30px;
+    }
+
     &__map {
         height: 528px;
 
-        iframe {
-            
+        @media (max-width: 991px) {
+            height: 400px;
+        }
+
+        @media (max-width: 767px) {
+            height: 320px;
+        }
+    }
+
+    &__info {
+        position: absolute;
+        z-index: 800;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        background: linear-gradient(98.09deg, #64656D 13.09%, #212227 153.45%);
+        box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        padding: 20px 16px;
+        width: 339px;
+
+        @media (max-width: 767px) {
+            position: relative;
+            width: 100%;
+            max-width: 290px;
+            transform: none;
+            top: 0;
+            margin-bottom: 20px;
+            padding: 20px 10px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    &__adress {
+        padding-left: 32px;
+        font-size: 18px;
+        line-height: 22px;
+        background-repeat: no-repeat;
+        background-image: url(../img/mark.svg);
+        margin-bottom: 32px;
+        color: #FFFFFF;
+        max-width: 260px;
+        background-position: center left;
+    }
+
+    &__tel {
+        padding-left: 32px;
+        font-size: 24px;
+        line-height: 29px;
+        font-family: $mus700;
+        background-repeat: no-repeat;
+        background-image: url(../img/tel.svg);
+        margin-bottom: 32px;
+        color: #FFFFFF;
+        display: block;
+        background-position: center left;
+    }
+
+    &__mail {
+        padding-left: 32px;
+        font-size: 18px;
+        line-height: 22px;
+        font-family: $mus700;
+        background-repeat: no-repeat;
+        background-image: url(../img/mail.svg);
+        margin-bottom: 21px;
+        color: #FFFFFF;
+        display: block;
+        background-position: center left;
+    }
+
+    &__button-wr {
+        justify-content: center;
+    }
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+
+    @media (max-width: 767px) {
+        display: block;
+    }
+    &__copyright {
+        font-size: 14px;
+        line-height: 19px;
+        color: #C4C4C4;
+
+        @media (max-width: 767px) {
+            text-align: center;
+        }
+    }
+
+    &__conditions {
+        font-size: 14px;
+        line-height: 19px;
+        display: block;
+        color: #C4C4C4;
+        @media (max-width: 767px) {
+            text-align: center;
         }
     }
 }

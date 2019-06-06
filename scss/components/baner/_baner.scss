@@ -4,16 +4,28 @@
     background: linear-gradient(138.37deg, #18275A 1.85%, #08113C 52.72%);
     position: relative;
     overflow: hidden;
+    padding-top: 103px;
+
+    @media (max-width: 767px) {
+        padding-top: 66px;
+    }
 
     &__flex-wrapper {
         display: flex;
         align-items: center;
-
+        @media (max-width: 767px) {
+            flex-direction: column-reverse;
+        }
     }
 
     &__left-side {
         position: relative;
         max-width: 466px;
+
+        @media (max-width: 767px) {
+            max-width: 290px;
+            margin: 0 auto;
+        }
     }
 
     &__right-side {
@@ -21,6 +33,11 @@
         width: 100%;
         max-width: 350px;
         margin:  0 auto;
+
+        @media (max-width: 767px) {
+            max-width: 100%;
+            margin-bottom: 30px;
+        }
     }
 
     &__photo-wr {
@@ -37,6 +54,17 @@
         background: linear-gradient(114.33deg, #3E3E45 15.15%, #292830 112.03%);
         box-shadow: 10px 4px 15px rgba(0, 0, 0, 0.25);
         border-radius: 10px;
+
+        @media (max-width: 1375px) {
+            transform: translateX(0) skewX(15deg);
+        }
+
+        @media (max-width: 767px) {
+            padding: 18px 40px;
+            left: 50%;
+            transform: translateX(-50%) skewX(15deg);
+            width: 250px;
+        }
         
     }
 
@@ -47,6 +75,11 @@
         line-height: 29px;
         text-align: center;
         font-family: $mus700;
+
+        @media (max-width: 767px) {
+            font-size: 18px;
+            line-height: 26px;
+        }
     }
 
     &__title {
@@ -55,6 +88,11 @@
         font-family: $mus700;
         color: #FFFFFF;
         margin-bottom: 15px;
+
+        @media (max-width: 767px) {
+            font-size: 32px;
+            line-height: inherit;
+        }
     }
 
     &__text {
@@ -70,12 +108,37 @@
         left: -160px;
         width: 1235px;
         height: 418px;
-        background-image: url(../img/dots1.png);
+        background-image: url(../img/dots2.png);
+    }
+
+    &__scroll {
+        position: absolute;
+        top: 50%;
+        left: -260px;
+        transform-origin: center;
+        transform: translateY(-50%) rotate(-90deg);
+
+        p {
+            font-size: 18px;
+            line-height: 22px;
+            color: rgba(255, 255, 255, 0.3);
+            margin-bottom: 10px;
+        }
+
+        img {
+            transform-origin: center;
+            transform: rotate(90deg);
+            margin: 0 auto;
+        }
     }
 }
 
 .button-wr {
     display: flex;
+
+    @media (max-width: 767px) {
+        justify-content: center;
+    }
 
     &__button {
         display: block;
